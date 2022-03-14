@@ -1,0 +1,31 @@
+<div class="bg-image"></div>
+<h1>CoderSchool's Psychic Powers Tester</h1>
+<p>Do you have psychic powers?</p>
+<p>If so, prove it by guessing what number I am thinking of right now.</p>
+<p>I am thinking of a number between 1 and 10.</p>
+
+<button class="btn btn-guess" role="button" onclick="makeGuess()">
+  Guess
+</button>
+
+<h2>You guessed: <span id="last-guess">?</span></h2>
+<h2>
+  Your previous gueses were:
+  <span id="guesses-previous">?</span>.
+</h2>
+<h2><span id="suggest-message"></span></h2>
+<h2>That guess was <span id="correct">?</span></h2>
+
+<h2>
+  You have
+  <span id="guesses-remaining" class="text-hightlight">5</span> times.
+</h2>
+<h2 id="gameover" class="text-hightlight hide"> Game over !</h2>
+<button
+  disabled
+  class="btn btn-playagain"
+  role="button"
+  onclick="resetGame()"
+>
+  Play again
+</button>

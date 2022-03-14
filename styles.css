@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 0.1em black;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+h1 {
+  padding-top: 80px;
+  margin: 0;
+  font-size: 3em;
+  margin-top: -0.6em;
+  font-family: "Vibur", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f93a13,
+    0 0 73px #f93a13;
+}
+
+.bg-image {
+  background-image: url(https://ak.picdn.net/shutterstock/videos/19625326/thumb/1.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.text-hightlight {
+  font-size: 2rem;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #ff7426, 0 0 0.3em #f93a13;
+}
+
+#last-guess span {
+  font-size: 0.8em;
+  text-shadow: none;
+}
+
+/* CSS button */
+.btn {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 19px 32px;
+  }
+}
+
+.btn:before,
+.btn:after {
+  border-radius: 80px;
+}
+
+.btn:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.btn:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.btn:hover:not(:disabled):before {
+  background: linear-gradient(
+    92.83deg,
+    rgb(255, 116, 38) 0%,
+    rgb(249, 58, 19) 100%
+  );
+}
+
+.btn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.btn:active:not(:disabled) {
+  color: #ccc;
+}
+
+.btn:active:not(:disabled):before {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.btn:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+/* CSS FOR SUCESSFUL MESSAGE */
+.successful {
+  color: #38ff26;
+  text-shadow: 0 0 0.1em black, 0 0 0.05em #fff;
+}
+
+.fail {
+  color: #ff2a00;
+  text-shadow: 0 0 0.1em black, 0 0 0.05em #fff;
+}
+
+
+.hide {
+  display:none;
+}
