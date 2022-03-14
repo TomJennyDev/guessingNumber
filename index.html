@@ -1,31 +1,49 @@
-<div class="bg-image"></div>
-<h1>CoderSchool's Psychic Powers Tester</h1>
-<p>Do you have psychic powers?</p>
-<p>If so, prove it by guessing what number I am thinking of right now.</p>
-<p>I am thinking of a number between 1 and 10.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Vibur:400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-image"></div>
+    <h1>CoderSchool's Psychic Powers Tester</h1>
+    <p>Do you have psychic powers?</p>
+    <p>If so, prove it by guessing what number I am thinking of right now.</p>
+    <p>I am thinking of a number between 1 and 10.</p>
 
-<button class="btn btn-guess" role="button" onclick="makeGuess()">
-  Guess
-</button>
+    <button class="btn btn-guess" role="button" onclick="makeGuess()">
+      Guess
+    </button>
 
-<h2>You guessed: <span id="last-guess">?</span></h2>
-<h2>
-  Your previous gueses were:
-  <span id="guesses-previous">?</span>.
-</h2>
-<h2><span id="suggest-message"></span></h2>
-<h2>That guess was <span id="correct">?</span></h2>
+    <h2>You guessed: <span id="last-guess">?</span></h2>
+    <h2>
+      Your previous gueses were:
+      <span id="guesses-previous">?</span>.
+    </h2>
+    <h2><span id="suggest-message"></span></h2>
+    <h2>That guess was <span id="correct">?</span></h2>
 
-<h2>
-  You have
-  <span id="guesses-remaining" class="text-hightlight">5</span> times.
-</h2>
-<h2 id="gameover" class="text-hightlight hide"> Game over !</h2>
-<button
-  disabled
-  class="btn btn-playagain"
-  role="button"
-  onclick="resetGame()"
->
-  Play again
-</button>
+    <h2>
+      You have
+      <span id="guesses-remaining" class="text-hightlight">5</span> times.
+    </h2>
+    <h2 id="gameover" class="text-hightlight hide">Game over !</h2>
+    <button
+      disabled
+      class="btn btn-playagain"
+      role="button"
+      onclick="resetGame()"
+    >
+      Play again
+    </button>
+    <script src="./index.js"></script>
+  </body>
+</html>
